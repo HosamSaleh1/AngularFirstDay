@@ -1,0 +1,57 @@
+<h1>Hello {{firstName}} {{lastName}}</h1>
+<h2>{{getMsg()}}</h2>
+<h2 [textContent]='title'></h2>
+<h2 [style.color]='color'>Example 1</h2>
+<button [disabled]='isDesable'>Submit</button>
+<label for='keyup'>keyUP</label>
+<input type="text" id="keyup" (keyup)='onKeyUp($event)'>
+<br>
+<br>
+<button (click)='onClick($event)' id="counter"><h1>+</h1></button>
+<label for="counter"><h1>{{num}}</h1></label>
+<br>
+<br>
+<input type="text" name="value" id="value" [(ngModel)]="value"><br>
+<label for="value" (mouseover)="test()"><h1>I entered {{value}}</h1></label>
+
+<ul>
+    <li *ngFor='let i of items'>
+        {{i}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor='let user of users'>
+        {{user.id}}- {{user.name}} : {{user.age}}
+    </li>
+</ul>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Index</th>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Actor</th>
+        <th scope="col">Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let movie of movies; let i=index'>
+        <th scope="row">{{i+1}}</th>
+        <td>{{movie.id}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.actor}}</td>
+        <td>{{movie.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="text" [(ngModel)]='num1'>
+  <div [ngSwitch]='num1'>
+      <p *ngSwitchCase=1>One</p>
+      <p *ngSwitchCase=2>Two</p>
+      <p *ngSwitchCase=3>Three</p>
+      <p *ngSwitchCase=4>Four</p>
+      <p *ngSwitchCase=5>Five</p>
+      <p *ngSwitchDefault>This is the default</p>
+  </div>
