@@ -46,7 +46,16 @@
       </tr>
     </tbody>
   </table>
-  <input type="text" [(ngModel)]='num1'>
+  <input type="text" [(ngModel)]='num1'><br>
+  <select class="form-select" aria-label="Default select example" [(ngModel)]='num1'>
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+    <option value="100">Undefined</option>
+  </select><br>
   <div [ngSwitch]='num1'>
       <p *ngSwitchCase=1>One</p>
       <p *ngSwitchCase=2>Two</p>
