@@ -1,0 +1,13 @@
+<p>parent works!</p>
+
+<!-- <div class="row countainer">
+    <button class="col-4 btn" (click)="increase()">Increase</button>
+    <button class="col-4 btn" (click)="decrease()">Decrease</button>
+</div> -->
+
+
+<p>
+    The count is: {{counter}}
+</p>
+<!-- <app-chiled [count]='counter'></app-chiled> -->
+<app-chiled (countChanged)="countChangedFunction($event)"></app-chiled>

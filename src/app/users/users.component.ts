@@ -56,12 +56,51 @@ movies:Movies[] = [
   {id:4,title:'black honey',actor:'ahmed ',year:2010}
 ]
 
+movies1:Movies[]=[]
+mTitle:string=""
+mActor:string=""
+mYear:number=0
+
+add(){
+  this.movies1.push({title:this.mTitle,actor:this.mActor,year:this.mYear})
+  this.mTitle=""
+  this.mActor=""
+  this.mYear=0
+}
+
+refresh(){
+  this.movies1 = [
+    {id:1,title:'wega',actor:'hany salama',year:2000},
+    {id:2,title:'army',actor:'brad bit',year:1995},
+    {id:3,title:'myth',actor:'jacky chan',year:2005},
+    {id:4,title:'black honey',actor:'ahmed ',year:2010}
+  ]
+}
+
+removeMovie(index:number){
+  this.movies1.splice(index,1)
+}
+
+toDate: Date = new Date
+
+obj={
+  a:123,
+  b:456,
+  c:789
+}
+
+toString:string = 'yAssEr'
 num1:number=0
 
+show?:boolean
 
+isSelected:boolean = true
 
+celsius:number = 0
+Fahrenheit:number = 0
 
   ngOnInit(): void {
+    this.refresh()
   }
 
 }

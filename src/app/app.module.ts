@@ -4,11 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { TransformPipe } from './transform.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChiledComponent } from './chiled/chiled.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    TransformPipe,
+    ParentComponent,
+    ChiledComponent
   ],
   imports: [
     BrowserModule,
